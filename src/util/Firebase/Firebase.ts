@@ -27,7 +27,7 @@ class Firebase {
     return getAuth(this.app);
   }
 
-  static get firestore() {
+  static get db() {
     if (!this.app) {
       this.init();
     }
