@@ -19,10 +19,10 @@ export const ButtonStyled = styled.button<{
   cursor: pointer;
 
   background-color: ${({ color, shape }) => {
-    if (shape === 'outline') {
-      return 'var(--COLOR_WHITE);';
-    } else {
+    if (shape === 'fill') {
       return parseColors(color);
+    } else {
+      return 'var(--COLOR_WHITE);';
     }
   }};
 
