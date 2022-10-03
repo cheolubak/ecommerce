@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
-import { SIZES, THEMES, SHAPES, STATUSES } from '../../subatomic/Theme';
+import { SIZES, THEMES, SHAPES } from '../../subatomic/Theme';
 import { BUTTON } from '../../subatomic/Typography';
+import { parseColors } from '../../util/Colors';
 
 export const ButtonStyled = styled.button<{
   color: THEMES;
@@ -88,34 +89,3 @@ export const ButtonStyled = styled.button<{
     }};
   }
 `;
-
-function parseColors(theme: THEMES, status: STATUSES = 'default'): string {
-  if (status === 'hover') {
-    switch (theme) {
-      case 'primary':
-        return `var(--COLOR_PRIMARY_HOVER);`;
-      case 'secondary':
-        return `var(--COLOR_SECONDARY_HOVER);`;
-      case 'warning':
-        return `var(--COLOR_WARNING_HOVER);`;
-    }
-  } else if (status === 'active') {
-    switch (theme) {
-      case 'primary':
-        return `var(--COLOR_PRIMARY_ACTIVE);`;
-      case 'secondary':
-        return `var(--COLOR_SECONDARY_ACTIVE);`;
-      case 'warning':
-        return `var(--COLOR_WARNING_ACTIVE);`;
-    }
-  } else {
-    switch (theme) {
-      case 'primary':
-        return `var(--COLOR_PRIMARY);`;
-      case 'secondary':
-        return `var(--COLOR_SECONDARY);`;
-      case 'warning':
-        return `var(--COLOR_WARNING);`;
-    }
-  }
-}
