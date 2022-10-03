@@ -10,10 +10,10 @@ export default function Image({
 }: ImageProps) {
   return (
     <ImageStyled
+      {...props}
       width={width}
       height={height}
       objectFit={objectFit}
-      {...props}
       loading='lazy'
       decoding='async'
     />
