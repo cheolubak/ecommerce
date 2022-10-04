@@ -12,6 +12,10 @@ export function parseColors(
         return `var(--COLOR_SECONDARY_HOVER);`;
       case 'warning':
         return `var(--COLOR_WARNING_HOVER);`;
+      case 'black':
+        return `var(--COLOR_BLACK);`;
+      case 'gray':
+        return `var(--COLOR_GRAY);`;
     }
   } else if (status === 'active') {
     switch (theme) {
@@ -21,6 +25,10 @@ export function parseColors(
         return `var(--COLOR_SECONDARY_ACTIVE);`;
       case 'warning':
         return `var(--COLOR_WARNING_ACTIVE);`;
+      case 'black':
+        return `var(--COLOR_BLACK)`;
+      case 'gray':
+        return `var(--COLOR_GRAY);`;
     }
   } else {
     switch (theme) {
@@ -30,6 +38,10 @@ export function parseColors(
         return `var(--COLOR_SECONDARY);`;
       case 'warning':
         return `var(--COLOR_WARNING);`;
+      case 'black':
+        return `var(--COLOR_BLACK)`;
+      case 'gray':
+        return `var(--COLOR_GRAY);`;
     }
   }
 }
