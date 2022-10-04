@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { RecoilRoot } from 'recoil';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './components/pages/Home';
+import Loading from './components/atoms/Loading';
+
+const Home = React.lazy(() => import('./components/pages/Home'));
 
 function App() {
-  const router = createBrowserRouter([{ path: '/', element: <Home /> }]);
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: (
+        <Suspense fallback={<Loading />}>
+          <Home />
+        </Suspense>
+      ),
+    },
+  ]);
   return (
     <RecoilRoot>
       <RouterProvider router={router} />
