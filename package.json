@@ -16,6 +16,7 @@
     "dotenv": "^16.0.3",
     "firebase": "^9.10.0",
     "firebase-tools": "^11.13.0",
+    "lottie-web": "^5.9.6",
     "nanoid": "^4.0.0",
     "node-sass": "^7.0.3",
     "react": "^18.2.0",
