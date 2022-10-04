@@ -1,6 +1,6 @@
 import { initializeApp, FirebaseApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore';
+import { initializeFirestore, CACHE_SIZE_UNLIMITED } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
 class Firebase {
@@ -31,7 +31,9 @@ class Firebase {
     if (!this.app) {
       this.init();
     }
-    return getFirestore(this.app);
+    return initializeFirestore(this.app, {
+      cacheSizeBytes: CACHE_SIZE_UNLIMITED,
+    });
   }
 
   static get storage() {
