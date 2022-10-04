@@ -1,6 +1,7 @@
 import Container from '../../atoms/Container';
 import Header from '../../molecules/Header';
 import FavoriteProducts from '../../organisms/FavoriteProducts';
+import RecentProducts from '../../organisms/RecentProducts';
 
 export default function HomeTemplate() {
   return (
@@ -8,6 +9,7 @@ export default function HomeTemplate() {
       <Header />
       <Container>
         <FavoriteProducts />
+        <RecentProducts />
       </Container>
     </>
   );

@@ -5,7 +5,6 @@ import {
   orderBy,
   query,
   QueryDocumentSnapshot,
-  enableMultiTabIndexedDbPersistence,
 } from 'firebase/firestore';
 import { Product } from '../../models/Product';
 import Firestore from './Firestore';
@@ -16,8 +15,7 @@ class ProductQuery extends Firestore {
     fromFirestore: (snap: QueryDocumentSnapshot) => snap.data() as T,
   });
 
-  static async fetchFavoriteProducts() {
-    await enableMultiTabIndexedDbPersistence(this.db);
+  static fetchFavoriteProducts() {
     const productRef = collection(this.db, 'product').withConverter(
       this.converter<Product>()
     );
@@ -25,8 +23,7 @@ class ProductQuery extends Firestore {
     return getDocs(q);
   }
 
-  static async fetchNewestProduct() {
-    await enableMultiTabIndexedDbPersistence(this.db);
+  static fetchRecentProduct() {
     const productRef = collection(this.db, 'product').withConverter(
       this.converter<Product>()
     );

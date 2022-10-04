@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
 
-export const FavoriteProductsStyled = styled.div`
+export const RecentProductsStyled = styled.div`
   padding: 48px 24px;
 `;

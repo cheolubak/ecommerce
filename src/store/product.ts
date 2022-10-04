@@ -6,3 +6,8 @@ export const favoriteProductsState = atom<Product[]>({
   key: `favoriteProductsState${nanoid(5)}`,
   default: [],
 });
+
+export const recentProductsState = atom<Product[]>({
+  key: `recentProductsState${nanoid(5)}`,
+  default: [],
+});
