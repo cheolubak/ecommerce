@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '../../atom/Button';
-import Icon from '../../atom/Icon';
-import IconButton from '../../atom/IconButton';
-import Logo from '../../atom/Logo';
+import Button from '../../atoms/Button';
+import Icon from '../../atoms/Icon';
+import IconButton from '../../atoms/IconButton';
+import Logo from '../../atoms/Logo';
 import { HeaderProps } from './HeaderProps';
 import {
   HeaderNavCategoryStyeld,
