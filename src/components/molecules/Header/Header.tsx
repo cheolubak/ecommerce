@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Button from '../../atoms/Button';
 import Icon from '../../atoms/Icon';
 import IconButton from '../../atoms/IconButton';
@@ -10,7 +10,7 @@ import {
   HeaderStyled,
 } from './HeaderStyled';
 
-export default function Header({ ...props }: HeaderProps) {
+function Header({ ...props }: HeaderProps) {
   return (
     <HeaderStyled>
       <HeaderNavCategoryStyeld>
@@ -42,3 +42,5 @@ export default function Header({ ...props }: HeaderProps) {
     </HeaderStyled>
   );
 }
+
+export default memo(Header);

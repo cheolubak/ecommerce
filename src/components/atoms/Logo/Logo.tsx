@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-export default function Logo() {
+function Logo() {
   return (
     <svg
       width='48'
@@ -16,3 +16,5 @@ export default function Logo() {
     </svg>
   );
 }
+
+export default memo(Logo);

@@ -1,8 +1,8 @@
-import React, { HTMLAttributes } from 'react';
+import React, { HTMLAttributes, memo } from 'react';
 import { ContainerStyled } from './ContainerStyled';
 
-export default function Container({
-  ...props
-}: HTMLAttributes<HTMLDivElement>) {
+function Container({ ...props }: HTMLAttributes<HTMLDivElement>) {
   return <ContainerStyled>{props.children}</ContainerStyled>;
 }
+
+export default memo(Container);

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { ListTitleProps } from './ListTitleProps';
 import { ListTitleStyled } from './ListTitleStyled';
 
-export default function ListTitle({ ...props }: ListTitleProps) {
+function ListTitle({ ...props }: ListTitleProps) {
   return <ListTitleStyled>{props.children}</ListTitleStyled>;
 }
+
+export default memo(ListTitle);

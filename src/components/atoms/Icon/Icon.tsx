@@ -1,8 +1,9 @@
+import React, { memo } from 'react';
 import { IconProps } from './IconProps';
 import Icons from './Icons';
 import { IconStyled } from './IconStyled';
 
-export default function Icon({ color, len = 24, icon, ...props }: IconProps) {
+function Icon({ color, len = 24, icon, ...props }: IconProps) {
   return (
     <IconStyled
       color={color}
@@ -13,3 +14,5 @@ export default function Icon({ color, len = 24, icon, ...props }: IconProps) {
     </IconStyled>
   );
 }
+
+export default memo(Icon);

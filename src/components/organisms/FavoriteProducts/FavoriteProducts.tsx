@@ -1,3 +1,4 @@
+import React, { memo } from 'react';
 import { useRecoilValue } from 'recoil';
 import { favoriteProductsState } from '../../../store/product';
 import ListTitle from '../../atoms/ListTitle';
@@ -5,7 +6,7 @@ import ProductList from '../ProductList';
 import { FavoriteProductsProps } from './FavoriteProductsProps';
 import { FavoriteProductsStyled } from './FavoriteProductsStyled';
 
-export default function FavoriteProducts({ ...props }: FavoriteProductsProps) {
+function FavoriteProducts({ ...props }: FavoriteProductsProps) {
   const products = useRecoilValue(favoriteProductsState);
   return (
     <FavoriteProductsStyled>
@@ -14,3 +15,5 @@ export default function FavoriteProducts({ ...props }: FavoriteProductsProps) {
     </FavoriteProductsStyled>
   );
 }
+
+export default memo(FavoriteProducts);

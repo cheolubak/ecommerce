@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState, memo } from 'react';
 import { ProductCardProps } from './ProductCardProps';
 import {
   ProductCardStyled,
@@ -11,7 +11,7 @@ import Image from '../../atoms/Image';
 import { Storage } from '../../../util/Firebase';
 import ProductSatisfaction from './ProductSatisfaction';
 
-export default function ProductCard({ product, ...props }: ProductCardProps) {
+function ProductCard({ product, ...props }: ProductCardProps) {
   const [thumbnails, setThumbnail] = useState<string[]>([]);
 
   const fetchProductImages = useCallback(() => {
@@ -30,9 +30,14 @@ export default function ProductCard({ product, ...props }: ProductCardProps) {
     <ProductCardStyled>
       <ProductThumbnailStyled>
         <picture>
-          {thumbnails.map((x) => {
+          {thumbnails.map((x, idx) => {
             if (x.includes('webp')) {
-              return <source src={x} />;
+              return (
+                <source
+                  key={`thumb-${product.productId}-${idx}`}
+                  src={x}
+                />
+              );
             } else {
               return (
                 <Image
@@ -57,3 +62,5 @@ export default function ProductCard({ product, ...props }: ProductCardProps) {
     </ProductCardStyled>
   );
 }
+
+export default memo(ProductCard);

@@ -19,7 +19,7 @@ class ProductQuery extends Firestore {
     const productRef = collection(this.db, 'product').withConverter(
       this.converter<Product>()
     );
-    const q = query(productRef, orderBy('satisfaction', 'desc'), limit(5));
+    const q = query(productRef, orderBy('satisfaction', 'desc'), orderBy('updatedAt', 'desc'), limit(5));
     return getDocs(q);
   }
 
@@ -27,7 +27,7 @@ class ProductQuery extends Firestore {
     const productRef = collection(this.db, 'product').withConverter(
       this.converter<Product>()
     );
-    const q = query(productRef, orderBy('updatedAt', 'desc'), limit(5));
+    const q = query(productRef, orderBy('updatedAt', 'desc'), orderBy('satisfaction', 'desc'), limit(5));
     return getDocs(q);
   }
 }

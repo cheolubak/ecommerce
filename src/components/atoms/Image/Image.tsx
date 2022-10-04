@@ -1,13 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { ImageProps } from './ImageProps';
 import { ImageStyled } from './ImageStyled';
 
-export default function Image({
-  width,
-  height,
-  objectFit,
-  ...props
-}: ImageProps) {
+function Image({ width, height, objectFit, ...props }: ImageProps) {
   return (
     <ImageStyled
       {...props}
@@ -19,3 +14,5 @@ export default function Image({
     />
   );
 }
+
+export default memo(Image);

@@ -1,5 +1,5 @@
+import React, { forwardRef, useReducer, memo } from 'react';
 import classNames from 'classnames';
-import React, { forwardRef, useReducer } from 'react';
 import { InputProps } from './InputProps';
 import { InputOutlineStyled, InputStyled } from './InputStyled';
 
@@ -36,7 +36,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
   }
 );
 
-export default Input;
+export default memo(Input);
 
 function reducerInput(state: string, action: string) {
   switch (action) {

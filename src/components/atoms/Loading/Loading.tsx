@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, memo } from 'react';
 import lottie from 'lottie-web/build/player/lottie_light';
 import { LoadingStyled } from './LoadingStyled';
 
-export default function Loading({ ...props }) {
+function Loading({ ...props }) {
   const loadingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -19,3 +19,5 @@ export default function Loading({ ...props }) {
   }, []);
   return <LoadingStyled ref={loadingRef} />;
 }
+
+export default memo(Loading);
