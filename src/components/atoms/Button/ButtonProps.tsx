@@ -5,4 +5,5 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   color?: THEMES;
   shape?: SHAPES;
   size?: SIZES;
+  existsShadow?: boolean;
 }

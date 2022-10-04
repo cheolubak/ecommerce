@@ -7,6 +7,7 @@ export const ButtonStyled = styled.button<{
   color: THEMES;
   size: SIZES;
   shape: SHAPES;
+  existsShadow: boolean;
 }>`
   ${BUTTON};
   all: unset;
@@ -23,6 +24,14 @@ export const ButtonStyled = styled.button<{
       return parseColors(color);
     } else {
       return 'var(--COLOR_WHITE);';
+    }
+  }};
+
+  box-shadow: ${({ color, existsShadow }) => {
+    if (existsShadow) {
+      return `var(--SHADOW_${color.toUpperCase()});`;
+    } else {
+      return 'none';
     }
   }};
 
