@@ -2,6 +2,7 @@ import { initializeApp, FirebaseApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { initializeFirestore, CACHE_SIZE_UNLIMITED } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
+import { getAnalytics } from 'firebase/analytics';
 
 class Firebase {
   static app: FirebaseApp;
@@ -41,6 +42,13 @@ class Firebase {
       this.init();
     }
     return getStorage(this.app);
+  }
+
+  static get analytics() {
+    if (!this.app) {
+      this.init();
+    }
+    return getAnalytics(this.app);
   }
 }
 

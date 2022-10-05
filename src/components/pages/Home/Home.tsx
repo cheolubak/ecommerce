@@ -6,10 +6,13 @@ import {
   recentProductsState,
 } from '../../../store/product';
 import HomeTemplate from '../../templates/Home';
+import { useAnalytics } from '../../../hooks/analytics';
 
 export default function Home() {
   const [, setFavorites] = useRecoilState(favoriteProductsState);
   const [, setRecents] = useRecoilState(recentProductsState);
+
+  const { pageView } = useAnalytics();
 
   const fetchFavoriteProducts = useCallback(() => {
     ProductQuery.fetchFavoriteProducts().then((snaps) => {
@@ -34,6 +37,8 @@ export default function Home() {
   useEffect(() => {
     fetchFavoriteProducts();
     fetchRecentProducts();
+
+    pageView({ screenName: 'Home', screenClass: 'HomePage' });
   }, []);
 
   return (
