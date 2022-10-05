@@ -21,7 +21,7 @@ function SubBanner({ ...props }) {
       <SubBannerStyled>
         <SubBannerLeftContentStyled>
           <SubBannerLeftImageStyled>
-            <source src='https://firebasestorage.googleapis.com/v0/b/portfolio-995c6.appspot.com/o/product%2Fsubbanner-item1.webp?alt=media&token=4e19e148-cf0d-496d-a945-1d87b646b3f8' />
+            <source srcSet='https://firebasestorage.googleapis.com/v0/b/portfolio-995c6.appspot.com/o/product%2Fsubbanner-item1.webp?alt=media&token=4e19e148-cf0d-496d-a945-1d87b646b3f8' />
             <Image
               width='100%'
               height='100%'
@@ -43,7 +43,7 @@ function SubBanner({ ...props }) {
         </SubBannerLeftContentStyled>
         <SubBannerRightContentStyled>
           <SubBannerRightImageStyled>
-            <source src='https://firebasestorage.googleapis.com/v0/b/portfolio-995c6.appspot.com/o/product%2Fsubbanner-item2.webp?alt=media&token=a7ee1bc9-5b7d-46da-beb4-88c1ff609e65' />
+            <source srcSet='https://firebasestorage.googleapis.com/v0/b/portfolio-995c6.appspot.com/o/product%2Fsubbanner-item2.webp?alt=media&token=a7ee1bc9-5b7d-46da-beb4-88c1ff609e65' />
             <Image
               width='100%'
               height='100%'
