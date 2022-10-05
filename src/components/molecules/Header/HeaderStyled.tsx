@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { mobileSize, tabletSize } from '../../util/Size';
 
 export const HeaderStyled = styled.header`
   display: flex;
@@ -7,6 +8,10 @@ export const HeaderStyled = styled.header`
   height: 64px;
   padding: 0 24px;
   box-shadow: var(--SHADOW_DEFAULT);
+
+  @media screen and (max-width: ${tabletSize}) {
+    padding: 0 16px;
+  }
 `;
 
 export const HeaderNavCategoryStyeld = styled.div`
@@ -14,6 +19,16 @@ export const HeaderNavCategoryStyeld = styled.div`
   justify-content: flex-start;
   align-items: center;
   gap: 36px;
+
+  @media screen and (max-width: ${tabletSize}) {
+    gap: 16px;
+  }
+
+  @media screen and (max-width: ${mobileSize}) {
+    & button {
+      display: none;
+    }
+  }
 `;
 
 export const HeaderNavMenuStyled = styled.div`
@@ -21,4 +36,8 @@ export const HeaderNavMenuStyled = styled.div`
   justify-content: flex-end;
   align-items: center;
   gap: 36px;
+
+  @media screen and (max-width: ${tabletSize}) {
+    gap: 16px;
+  }
 `;
