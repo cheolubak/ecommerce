@@ -1,4 +1,4 @@
-import React, {memo} from 'react';
+import React, { memo } from 'react';
 import Container from '../../atoms/Container';
 import Image from '../../atoms/Image';
 import { MainBannerProps } from './MainBannerProps';
@@ -23,7 +23,7 @@ function MainBanner({ ...props }: MainBannerProps) {
             </MainBannerSubSloganStyled>
           </MainBannerSloganWrapStyled>
           <MainBannerImageStyled>
-            <source src='https://firebasestorage.googleapis.com/v0/b/portfolio-995c6.appspot.com/o/product%2Fsubbanner-item1.webp?alt=media&token=4e19e148-cf0d-496d-a945-1d87b646b3f8' />
+            <source srcSet='https://firebasestorage.googleapis.com/v0/b/portfolio-995c6.appspot.com/o/product%2Fsubbanner-item1.webp?alt=media&token=4e19e148-cf0d-496d-a945-1d87b646b3f8' />
             <Image
               width='100%'
               height='100%'
