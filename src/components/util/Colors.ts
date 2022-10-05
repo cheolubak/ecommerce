@@ -16,6 +16,8 @@ export function parseColors(
         return `var(--COLOR_BLACK);`;
       case 'gray':
         return `var(--COLOR_GRAY);`;
+      case 'white':
+        return `var(--COLOR_WHITE);`;
     }
   } else if (status === 'active') {
     switch (theme) {
@@ -29,6 +31,8 @@ export function parseColors(
         return `var(--COLOR_BLACK)`;
       case 'gray':
         return `var(--COLOR_GRAY);`;
+      case 'white':
+        return `var(--COLOR_WHITE);`;
     }
   } else {
     switch (theme) {
@@ -42,6 +46,8 @@ export function parseColors(
         return `var(--COLOR_BLACK)`;
       case 'gray':
         return `var(--COLOR_GRAY);`;
+      case 'white':
+        return `var(--COLOR_WHITE);`;
     }
   }
 }

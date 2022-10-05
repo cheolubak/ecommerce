@@ -1,4 +1,5 @@
 import Container from '../../atoms/Container';
+import Footer from '../../molecules/Footer';
 import Header from '../../molecules/Header';
 import MainBanner from '../../molecules/MainBanner';
 import SubBanner from '../../molecules/SubBanner';
@@ -15,6 +16,7 @@ export default function HomeTemplate() {
         <SubBanner />
         <RecentProducts />
       </Container>
+      <Footer />
     </>
   );
 }
