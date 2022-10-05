@@ -1,3 +1,3 @@
-export const desktopSize = '1023px';
-export const tabletSize = '1023px';
-export const mobileSize = '767px';
+export const desktopSize = '1050px';
+export const tabletSize = '1050px';
+export const mobileSize = '600px';

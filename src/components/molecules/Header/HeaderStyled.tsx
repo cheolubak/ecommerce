@@ -14,23 +14,6 @@ export const HeaderStyled = styled.header`
   }
 `;
 
-export const HeaderNavCategoryStyeld = styled.div`
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 36px;
-
-  @media screen and (max-width: ${tabletSize}) {
-    gap: 16px;
-  }
-
-  @media screen and (max-width: ${mobileSize}) {
-    & button {
-      display: none;
-    }
-  }
-`;
-
 export const HeaderNavMenuStyled = styled.div`
   display: inline-flex;
   justify-content: flex-end;

@@ -33,16 +33,14 @@ jobs:
           npm run build
       - name: Deploy
         run: |
-          npx firebase use default --token "${{secrets.FIREBASE_TOKEN}}"
-          npx firebase deploy --only hosting --token "${{secrets.FIREBASE_TOKEN}}"
+          npx firebase deploy --only hosting:portfolio --token "${{secrets.FIREBASE_TOKEN}}"
       - name: Build Storybook
         run: |
           rm -rf build/
           npm run build-storybook
       - name: Deploy Storybook
         run: |
-          npx firebase use storybook --token "${{secrets.FIREBASE_TOKEN}}"
-          npx firebase deploy --only hosting --token "${{secrets.FIREBASE_TOKEN}}"
+          npx firebase deploy --only hosting:storybook --token "${{secrets.FIREBASE_TOKEN}}"
 
   automerge:
     runs-on: ubuntu-latest

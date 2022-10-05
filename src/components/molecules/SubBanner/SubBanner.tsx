@@ -36,10 +36,7 @@ function SubBanner({ ...props }) {
             <SubBannerDescriptionStyled>
               서브 배너의 설명입니다.
             </SubBannerDescriptionStyled>
-            <Button
-              color='secondary'
-              existsShadow
-            >
+            <Button color='secondary' existsShadow>
               OOOO 보러가기
             </Button>
           </SubBannerDetailStyled>
@@ -61,10 +58,7 @@ function SubBanner({ ...props }) {
             <SubBannerDescriptionStyled>
               서브 배너의 설명입니다.
             </SubBannerDescriptionStyled>
-            <Button
-              color='primary'
-              existsShadow
-            >
+            <Button color='primary' existsShadow>
               OOOO 보러가기
             </Button>
           </SubBannerDetailStyled>

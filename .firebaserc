@@ -5,6 +5,9 @@
   "targets": {
     "portfolio-995c6": {
       "hosting": {
+        "portfolio": [
+          "portfolio-995c6"
+        ],
         "storybook": [
           "storybook-14f48"
         ]
