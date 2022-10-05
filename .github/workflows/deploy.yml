@@ -32,7 +32,18 @@ jobs:
           npm install
           npm run build
       - name: Deploy
-        run: npx firebase deploy --only hosting --token "${{secrets.FIREBASE_TOKEN}}"
+        run: |
+          npx firebase use default
+          npx firebase deploy --only hosting --token "${{secrets.FIREBASE_TOKEN}}"
+      - name: Build Storybook
+        run: |
+          rm -rf build/
+          npm run build-storybook
+      - name: Deploy Storybook
+        run: |
+          npx firebase use storybook
+          npx firebase deploy --only hosting --token "${{secrets.FIREBASE_TOKEN}}"
+
   automerge:
     runs-on: ubuntu-latest
     needs: [build]

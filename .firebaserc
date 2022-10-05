@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "portfolio-995c6"
-  }
+  },
+  "targets": {
+    "portfolio-995c6": {
+      "hosting": {
+        "storybook": [
+          "storybook-14f48"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
